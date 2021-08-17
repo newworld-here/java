@@ -1,0 +1,52 @@
+package com.lockedme;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class LockedMeClass {
+	static final String folderpath = "G:\\Phase1project\\Lockmefiles";
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		List<String> fileNames = Filemanager.GetAllFiles(folderpath);
+//		for(String files: fileNames) 
+//		{
+//			System.out.println(files);
+//		}
+		// variable declaration
+//		Scanner obj = new Scanner(System.in);
+//		String filename;
+//		int linesCount;
+//		List<String> content = new ArrayList<String>();
+//		// read file name from user
+//		System.out.println("Enter file name :");
+//		filename = obj.nextLine();
+//		// Read number of lines from user
+//		System.out.println("Enter how many lines in file :");
+//		linesCount = Integer.parseInt(obj.nextLine());
+//
+//		// Read lines from user
+//		for (int i = 1; i <= linesCount; i++) {
+//			System.out.println("Enter line " + i + ":");
+//			content.add(obj.nextLine());
+//		}
+//		// save the content into the file
+//		boolean isSaved = Filemanager.writeContentToFile(folderpath, filename, content);
+//		if (isSaved)
+//			System.out.println("File and data saved successfully");
+//		else
+//			System.out.println("Some error occurs. Please contact admin@saurav.co");
+		Scanner obj = new Scanner(System.in);
+		String filename;
+		System.out.println("Enter file name :");
+		filename = obj.nextLine();
+		boolean isDelete = Filemanager.deleteFile(folderpath, filename);
+		if (isDelete)
+			System.out.println("File deleted successfully");
+		else
+			System.out.println("File is not found. Please contact admin@saurav.co");
+		
+	}
+
+}
